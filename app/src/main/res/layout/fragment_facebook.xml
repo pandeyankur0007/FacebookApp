@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:facebook="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/profilePicture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="#333"
+            android:textSize="18sp" />
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/loginButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            facebook:com_facebook_confirm_logout="true"
+            facebook:com_facebook_tooltip_mode="never_display" />
+
+        <Button
+            android:id="@+id/postStatusUpdateButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="Post Status Update"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/postPhotoButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="Post Photo"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/getInterestsButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="Get Interests !!"
+            facebook:com_facebook_confirm_logout="true" />
+
+        <Button
+            android:id="@+id/getAlbumsButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="Get Albums !!"
+            facebook:com_facebook_confirm_logout="true" />
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:clickable="true"
+        android:columnWidth="100dp"
+        android:drawSelectorOnTop="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp" />
+
+</LinearLayout>
